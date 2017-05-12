@@ -1,4 +1,4 @@
-package com.cheney.reflection;
+package com.cheney.jdbc4;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
@@ -90,6 +90,7 @@ public class ReflectionUtil {
 			return null;
 		}
 		ParameterizedType parameterizedType=(ParameterizedType) type;
+		System.out.println(parameterizedType+"111");
 		Type[] args=parameterizedType.getActualTypeArguments();
 		if(index<0||index>=args.length){
 			return null;

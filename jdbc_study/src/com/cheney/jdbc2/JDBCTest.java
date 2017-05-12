@@ -9,12 +9,15 @@ import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.Statement;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 
 import org.junit.Test;
 
 public class JDBCTest {
+	
+	Dao dao=new Dao();
 
 	@Test
 	public void testAddNewStudent(){
@@ -371,4 +374,30 @@ public class JDBCTest {
 			JDBCTools.releaseDB(resultSet, preparedStatement, connection);
 		}
 	}
+	
+	@Test
+	public void testGet2(){
+		String sql="SELECT * FROM student WHERE id=?";
+		Student student=dao.get(Student.class, sql,2);
+		System.out.println(student);
+	}
+	
+	@Test
+	public void testGetAll(){
+		String sql="SELECT * FROM student";
+		List<Student> list=dao.getForList(Student.class, sql);
+		System.out.println(list);
+	}
+	
+	@Test
+	public void testGetForValue(){
+		String sql="SELECT name FROM student WHERE id=?";
+		String name=dao.getForValue(sql, 1);
+		System.out.println(name);
+		
+		sql="SELECT max(id) FROM student";
+		int id=dao.getForValue(sql);
+		System.out.println(id);
+	}
+	
 }

@@ -1,4 +1,4 @@
-package com.cheney.reflection;
+package com.cheney.jdbc3;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
@@ -86,7 +86,7 @@ public class ReflectionUtil {
 	
 	public static Class getGenericSuperClassType(Class clazz,int index){
 		Type type=clazz.getGenericSuperclass();
-		if(!(type instanceof ParameterizedType)){
+		if(type instanceof ParameterizedType){
 			return null;
 		}
 		ParameterizedType parameterizedType=(ParameterizedType) type;

@@ -1,4 +1,4 @@
-package com.cheney.jdbc2;
+package com.cheney.jdbc3;
 
 import java.lang.reflect.InvocationTargetException;
 import java.sql.Connection;
