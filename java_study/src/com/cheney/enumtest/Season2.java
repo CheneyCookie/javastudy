@@ -7,13 +7,13 @@ public enum Season2 {
 	AUTUMN("秋天","秋水共长天一色"),
 	WINTER("冬天","窗含西岭千秋雪"),
 	;
-	
+
 	final String SEASON_NAME;
 	final String SEASON_DESC;
-	
+
 	private Season2(String seasonName,String seasonDesc){
 		this.SEASON_NAME=seasonName;
 		this.SEASON_DESC=seasonDesc;
 	}
-	
+
 }

@@ -23,7 +23,7 @@ public class TestString {
 	public void test() {
 		String str="www.cheney.com";
 		String result=str.replace('c', 'l');
-//		str=str.replace('c', 'l');
+		//str=str.replace('c', 'l');
 		
 		System.out.println(str);
 		System.out.println(result);

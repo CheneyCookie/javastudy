@@ -443,6 +443,7 @@ public class TestReflection {
 		Class clazz = Class.forName(className);
 		Object obj = clazz.newInstance();
 		Method method = clazz.getDeclaredMethod("setAge", int.class);
+		System.out.println(method);
 		int val = 6;
 		Annotation annotation = method.getAnnotation(AgeValidator.class);
 		if (annotation != null) {
@@ -477,6 +478,7 @@ public class TestReflection {
 			return null;
 		}
 		ParameterizedType parameterizedType = (ParameterizedType) type;
+		System.out.println(parameterizedType);
 		Type[] args = parameterizedType.getActualTypeArguments();
 
 		if (index >= args.length || index < 0) {

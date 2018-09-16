@@ -1,6 +1,14 @@
 package com.cheney.test;
 public class StaticTest{
-
+	static {
+		b=4;
+	}
+	static int b=8;
+	int a=9;
+{
+		
+		a=6;
+	}
 	String name;
 	static String clazz;
 	{
@@ -10,6 +18,7 @@ public class StaticTest{
 
 	static{
 		clazz="���һ��";
+//		b=4;
 		System.out.println("----静态代码块----");
 	}
 
@@ -30,4 +39,9 @@ public class StaticTest{
 		System.out.println("p2:clazz : "+clazz);
 		System.out.println("p2:name : "+name);
 	}
+	public static void main(String[] args) {
+		System.out.println(new StaticTest().a);
+		System.out.println(b);
+	}
+	
 }

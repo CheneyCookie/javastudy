@@ -94,7 +94,7 @@ public class TestSocket {
 		while((len=in.read(buffer))!=-1){
 			out.write(buffer, 0, len);
 		}
-		
+		out.flush();
 		out.close();
 		in.close();
 		
@@ -116,6 +116,7 @@ public class TestSocket {
 		while((len=in.read(buffer))!=-1){
 			out.write(buffer,0,len);
 		}
+		out.flush();
 		
 		in.close();
 		out.close();

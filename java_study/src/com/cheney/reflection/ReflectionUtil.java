@@ -51,6 +51,7 @@ public class ReflectionUtil {
 		for(Class clazz2=clazz;clazz2!=Object.class;clazz2=clazz2.getSuperclass()){
 			try {
 				field=clazz2.getDeclaredField(fieldName);
+				return field;
 			} catch (NoSuchFieldException e) {
 				e.printStackTrace();
 			} catch (SecurityException e) {
