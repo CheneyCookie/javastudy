@@ -77,6 +77,8 @@ public class JDBCTest {
 				preparedStatement.setString(1, "name_"+i);
 				preparedStatement.setString(2, "123@qq.com");
 				preparedStatement.executeUpdate();
+				
+				JDBCTools.commit(connection);
 			}
 			long end=System.currentTimeMillis();
 			
